@@ -1,8 +1,9 @@
 const { app, BrowserWindow, session, ipcMain, dialog, Menu } = require('electron');
 const { initiateProjectStorage, createProject, editProject, deleteProject, exportProject, createRisk, editRisk, deleteRisk } = require('./utility/project.js')
+const updater = require('./updater')
 const fs = require('fs')
 const path = require('path');
-const { v4 : uuid } = require('uuid')
+const { v4: uuid } = require('uuid')
 
 const storagePath = path.join(__dirname, './storage/projects.json');
 
@@ -22,6 +23,8 @@ if (require('electron-squirrel-startup')) {
 
 // Create the main window.
 const createMainWindow = () => {
+    setTimeout(updater, 3000)
+
     let mainSes = session.fromPartition('persist:mainSes')
     mainWindow = new BrowserWindow({
     width: 800, minWidth: 350,

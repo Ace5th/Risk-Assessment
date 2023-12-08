@@ -24,6 +24,7 @@
   "dependencies": {
     "docx": "^8.2.4",
     "electron-squirrel-startup": "^1.0.0",
+    "electron-updater": "^6.1.7",
     "fs": "^0.0.1-security",
     "nodemon": "^3.0.1",
     "uuid": "^9.0.1"
@@ -48,13 +49,13 @@
     },
     "mac": {
       "category": "public.app-category.business",
-      "target":  "dmg"
+      "target": "dmg"
     },
     "win": {
       "certificateFile": "private/ace5th.pfx",
       "certificatePassword": "",
       "publisherName": "ace5th",
-      "verifyUpdateCodeSignature":  false
+      "verifyUpdateCodeSignature": false
     },
     "linux": {
       "category": "Utility"
