@@ -2,7 +2,7 @@
   "name": "risk-analysis",
   "productName": "Risk Based Budget Analysis",
   "version": "1.0.0",
-  "description": "Application that output risk analysis inputs",
+  "description": "Risk Based Budget Analysis Program",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -10,12 +10,14 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "build": "electron-builder build",
+    "win-cert": "electron-builder create-self-signed-cert -p ace5th"
   },
   "keywords": [],
   "author": {
     "name": "Ace5th",
-    "email": "ajie.maaz@gmail.com"
+    "email": "acelightning9@gmail.com"
   },
   "license": "MIT",
   "dependencies": {
@@ -32,6 +34,26 @@
     "@electron-forge/maker-squirrel": "^6.4.2",
     "@electron-forge/maker-zip": "^6.4.2",
     "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
-    "electron": "27.0.4"
+    "electron": "27.0.4",
+    "electron-builder": "^24.9.1"
+  },
+  "repository": "https://github.com/Ace5th/Risk-Assessment",
+  "homepage": "https://github.com/Ace5th/Risk-Assessment",
+  "build": {
+    "appId": "com.ace5th.riskbasedbudgetanalysis",
+    "copyright": "Copyright Ace5th",
+    "mac": {
+      "category": "public.app-category.business",
+      "target":  "dmg"
+    },
+    "win": {
+      "certificateFile": "private/ace5th.pfx",
+      "certificatePassword": "",
+      "publisherName": "ace5th",
+      "verifyUpdateCodeSignature":  false
+    },
+    "linux": {
+      "category": "Utility"
+    }
   }
 }

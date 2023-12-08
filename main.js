@@ -41,9 +41,9 @@ const createMainWindow = () => {
   //mainSes.clearStorageData()
 
   // Open the DevTools.
-  if (process.env.NODE_ENV !== 'production') {
-      mainWindow.webContents.openDevTools();
-  }
+  //if (process.env.NODE_ENV !== 'production') {
+  //    mainWindow.webContents.openDevTools();
+  //}
 
   mainWindow.webContents.on('context-menu', (e) => {
       contextMenu.popup()
