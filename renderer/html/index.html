@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-security-policy" content="script-src 'self'" />
+    <title>Risk Based Budget Analysis</title>
+    <link rel="stylesheet" href="../css/index.css" />
+</head>
+<body>
+    <div id="welcome_popup_container_bg">
+        <div id="welcome_popup_container">
+            <div id="popup_description_container">
+                <img id="popup_logo" src="../../images/Logo_Kab_Toraja_Utara.png" alt="Logo Kabupaten Toraja Utara" />
+                <h1 id="popup_title">Risk Based Budget Analysis</h1>
+                <p class="popup_description">Selamat Datang</p>
+                <p class="popup_description">di Sistim Anggaran Kinerja Berbasis Risiko</p>
+            </div>
+            <div id="lower_popup_description_container">
+                <p class="lower_popup_description">Oleh Syarifuddin & Ratna Ayu Damayanti</p>
+                <p class="lower_popup_description">Universitas Hasanuddin</p>
+                <p class="lower_popup_description">Versi 1.0.0</p>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <button id="buka_buat_baru">+</button>
+        <input type="text" id="cari" placeholder="Cari">
+    </header>
+
+    <main>
+        <p id="tidak_ada_proyek">Tidak Ada Proyek</p>
+ 
+        <div id="proyek">
+                <!-- JANGAN LUPA HAPUS INI -->
+                <!--<div class="ada_proyek">
+                    <div class="ada_proyek_div">
+                        <div class="left_ada_proyek_div">
+                            <h2 class="ada_proyek_h2_id_proyek">ID Proyek</h2>
+                            <h2 class="ada_proyek_h2_nama_proyek">Nama Proyek</h2>
+                        </div>
+
+                        <div class="right_ada_proyek_div">
+                            <select class="ada_proyek_action" name="action">
+                                <option value="opsi" disabled selected hidden>OPSI</option>
+                                <option value="buka">Buka</option>
+                                <option value="edit">Edit</option>
+                                <option value="hapus">Hapus</option>
+                                <option value="export">Export</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="ada_proyek_lower_div">
+                        <h3 class="ada_proyek_h3_nama_opd">Nama OPD</h3>
+                        <h3 class="ada_proyek_h3_tahun_anggaran">Tahun Anggaran</h3>
+                    </div>
+                </div>-->
+                <!-- JANGAN LUPA HAPUS INI -->
+        </div>
+    </main>
+
+    <div id="buat_baru_bg">
+        <div id="buat_baru">
+            <h2 id="id_proyek_input"></h2>
+
+            <div class="buat_baru_section">
+                <label class="label_buat_baru_section" for="nama_proyek">Nama Proyek</label>
+
+                <input id="nama_proyek_input" name="nama_proyek" placeholder="e.g. Analisis Risiko Tahun 2000">
+            </div>
+
+            <div class="buat_baru_section">
+                <label class="label_buat_baru_section" for="nama_opd">Nama OPD</label>
+
+                <input id="nama_opd_input" type="text" name="name_opd" placeholder="e.g. Anto">
+            </div>
+
+            <div class="buat_baru_section">
+                <label class="label_buat_baru_section" for="tahun_anggaran">Tahun Anggaran</label>
+
+                <input id="tahun_anggaran_input" type="text" name="tahun_anggaran" placeholder="e.g. 2000">
+            </div>
+
+            <button id="simpan_buat_baru">Simpan</button>
+
+            <button id="edit_buat_baru">Edit</button>
+
+            <button id="tutup_buat_baru">Tutup</button>
+        </div>
+    </div>
+
+    <script src="../js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: auto;
+    /*    max-width: 38rem;
+    padding: 2rem;*/
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    background: white;
+}
+
+header {
+    background: #c0c8ff;
+    display: flex;
+    padding: 0.7em;
+    font-weight: bold;
+    border-bottom: 0.1em solid #1c2141;
+}
+
+main {
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+#id_proyek {
+    display: none;
+}
+
+#kembali_risk_index {
+    padding: 0em 0.4em;
+    margin-right: 0.4em;
+    font-size: 2em;
+    font-weight: bold;
+    background: #f18545;
+    border-radius: 0.4em;
+    border: 0.04em solid #1c2141;
+}
+
+#kembali_risk_index:hover {
+    background: #f06d20;
+}
+
+#title,
+#judul_proyek {
+    margin: 0.3em 0em;
+}
+
+#title {
+    margin-right: 1em;
+    padding-right: 1em;
+    border-right: #1c2141 0.1em solid;
+}
+
+.upper_risiko {
+    display: flex;
+    flex-flow: column;
+    background: #eaedf5;
+    padding: 0em 3em;
+    border-radius: 2em;
+    margin: 1em 0.7em;
+    border: 0.15em solid #1c2141;
+    color: black;
+}
+
+.lower_risiko {
+    display: flex;
+    flex-flow: column;
+    padding: 0em 0.8em;
+    margin-bottom: 0.7em;
+}
+
+.judul_upper_risiko {
+    margin-top: 0.8em;
+    margin-bottom: 1em;
+}
+
+input {
+    max-width: 100em;
+    max-height: 10em;
+    white-space: nowrap;
+    text-align: left;
+    vertical-align: top;
+    margin-top: 0.8em;
+    padding: 0.2em 0.5em;
+    min-height: 5em;
+    min-width: 50em;
+}
+
+select {
+    width: 20em;
+    height: 2em;
+    padding: 0.3em 0.5em;
+    margin-top: 0.8em;
+}
+
+#simpan_risk_input {
+    border-radius: 0.5em;
+    width: 5em;
+    height: 2em;
+    color: black;
+    font-size: 1.1em;
+    border: 0.04em solid #1c2141;
+    margin: 0.5em 1em 0.5em 0.7em;
+    padding: 0.1em;
+    background: #f18545;
+}
+
+#simpan_risk_input:hover {
+    background: #f06d20;
+}

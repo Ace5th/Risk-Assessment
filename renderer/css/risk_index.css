@@ -1,0 +1,187 @@
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: auto;
+    /*  max-width: 38rem;
+    padding: 2rem;*/
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    background: white;
+}
+
+header {
+    background: #4959aa;
+    display: flex;
+    padding: 0.7em;
+    font-weight: bold;
+    border-bottom: 0.1em solid #1c2141;
+}
+
+main {
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-flow: column;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+input {
+    font-size: 1.3em;
+    border-radius: 5em;
+    border: 0.04em solid #1c2141;
+    padding: 0 0.5em;
+}
+
+input::placeholder {
+    color: silver;
+}
+
+#kembali_index {
+    padding: 0em 0.4em;
+    margin-right: 0.4em;
+    font-size: 2em;
+    font-weight: bold;
+    background: #f18545;
+    border-radius: 0.4em;
+    border: 0.04em solid #1c2141;
+}
+
+#buat_baru_risk {
+    padding: 0em 0.4em;
+    margin-right: 0.6em;
+    font-size: 2em;
+    font-weight: bold;
+    background: #f18545;
+    border-radius: 0.4em;
+    border: 0.04em solid #1c2141;
+}
+
+#kembali_index:hover,
+#buat_baru_risk:hover {
+    background: #f06d20;
+}
+
+#cari {
+    flex-grow: 1;
+}
+
+#proyek_detail {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    border-bottom: #1c2141 0.1em solid;
+    background: #c0c8ff;
+    padding: 0em 0.9em;
+}
+
+#left_proyek_detail {
+    display: flex;
+}
+
+#right_proyek_detail {
+    margin-left: auto;
+    align-items: end;
+}
+
+#proyek_detail_id_proyek {
+    display: none;
+}
+
+#proyek_detail_nama_proyek,
+#proyek_detail_nama_opd,
+#proyek_detail_tahun_anggaran {
+    margin: 0.3em 0em;
+}
+
+#proyek_detail_nama_proyek {
+    margin-right: 1em;
+    padding-right: 1em;
+    border-right: #1c2141 0.1em solid;
+}
+
+#tidak_ada_risiko {
+    font-weight: bold;
+    color: silver;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 10em;
+    z-index: -1;
+}
+
+.ada_risiko {
+    display: flex;
+    flex-flow: column;
+    background: #eaedf5;
+    padding: 0em 3em;
+    border-radius: 2em;
+    margin: 1em 0.7em;
+    border: 0.15em solid #1c2141;
+    color: black;
+}
+
+.ada_risiko:hover {
+    background: #c0c8ff;
+}
+
+.ada_risiko_div {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+
+.left_ada_risiko_div {
+    display: flex;
+    flex-flow: column;
+}
+
+.right_ada_risiko_div {
+    margin-left: auto;
+}
+
+.ada_risiko_h2_id_risiko {
+    display: none;
+}
+
+.ada_risiko_h2_kode_risiko {
+    border-bottom: #1c2141 0.1em solid;
+    padding-bottom: 0.1em;
+    margin-bottom: 0.3em;
+    margin-top: 0em;
+}
+
+.ada_risiko_h3_kategori_risiko {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.95em;
+    margin: 0px 0px;
+}
+
+.ada_risiko_action {
+    border-radius: 0.5em;
+    width: 5.5em;
+    height: 1.8em;
+    background: #f18545;
+    color: black;
+    font-size: 0.9em;
+    margin-bottom: 0.3em;
+    padding-left: 0.3em;
+    border: 0.04em solid #1c2141;
+}
+
+.ada_risiko_deskripsi_risiko {
+    flex-grow: 1;
+    padding: 0.25em 0.5em;
+    margin: 0.2em 0em 1em 0em;
+}
+
+.ada_risiko_judul_deskripsi_risiko {
+    margin: 1em 0em 0em 0em;
+}

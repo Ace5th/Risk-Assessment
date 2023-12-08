@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-security-policy" content="script-src 'self'" />
+    <title>Risk Based Budget Analysis</title>
+    <link rel="stylesheet" href="../css/risk.css" />
+</head>
+<body>
+    <header>
+        <h2 id="id_proyek">ID Proyek</h2>
+        <h2 id="id_risiko">ID Risiko</h2>
+        <button id="kembali_risk_index"><</button>
+        <h2 id="judul_proyek">Judul Proyek</h2>
+        <h2 id="judul_risiko">Judul Risiko</h2>
+    </header>
+
+    <main>
+        <!-- JANGAN LUPA HAPUS INI -->
+        <!--<div class="upper_risiko">
+        <h2 class="judul_upper_risiko">Deskripsi Umum</h2>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Kode Kegiatan</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Kegiatan Rujukan</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Kode Risiko</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Status Risiko</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Peluang atau Ancaman</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Kategori Risiko</h3> <p class="deskripsi_risiko">DATA</p> </div>
+    </div>
+
+    <div class="upper_risiko">
+        <h2 class="judul_upper_risiko">Identifikasi Risiko</h2>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Unit Kerja</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Sasaran</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Periode Identifikasi Risiko</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Deskripsi Risiko</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Akar Penyebab</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Indikator Risiko</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Internal Control</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Dampak Kualitatif</h3> <p class="deskripsi_risiko">DATA</p> </div>
+    </div>
+
+    <div class="upper_risiko">
+        <h2 class="judul_upper_risiko">Risiko Inherent</h2>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Probabilitas</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Dampak</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Skor Risiko Inherent</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Tingkat Risiko Inherent</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Probabilitas Risiko Inherent Kualitatif</h3> <p class="deskripsi_risiko">DATA%</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Dampak Finansial Risiko Inherent</h3> <p class="deskripsi_risiko">Rp. DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Nilai Bersih Risiko Inherent</h3> <p class="deskripsi_risiko">Rp. DATA</p> </div>
+    </div>
+
+    <div class="upper_risiko">
+        <h2 class="judul_upper_risiko">Pemilik Risiko</h2>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Pemilik Risiko</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Jabatan Pemilik Risiko</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">No. HP Pemilik Risiko</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Email Pemilik Risiko</h3> <p class="deskripsi_risiko">DATA</p> </div>
+    </div>
+
+    <div class="upper_risiko">
+        <h2 class="judul_upper_risiko">Evaluasi Rencana Penanganan Risiko</h2>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Strategi</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Penanganan Risiko</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Biaya Penanganan Risiko</h3> <p class="deskripsi_risiko">Rp. DATA</p> </div>
+    </div>
+
+    <div class="upper_risiko">
+        <h2 class="judul_upper_risiko">Penanganan</h2>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Penanganan yang Telah Dilakukan</h3> <p class="deskripsi_risiko">DATA</p> </div>
+    </div>
+
+    <div class="upper_risiko">
+        <h2 class="judul_upper_risiko">Risiko Residual</h2>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Probabilitas Risiko Residual</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Dampak Risiko Residual</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Skor Risiko Residual</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Tingkat Risiko Residual</h3> <p class="deskripsi_risiko">DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Probabilitas Risiko Residual Kualitatif</h3> <p class="deskripsi_risiko">DATA%</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Dampak Finansial Risiko Residual</h3> <p class="deskripsi_risiko">Rp. DATA</p> </div>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Nilai Bersih Risiko Residual</h3> <p class="deskripsi_risiko">Rp. DATA</p> </div>
+    </div>
+
+    <div class="upper_risiko">
+        <h2 class="judul_upper_risiko">Departemen</h2>
+        <div class="risiko"> <h3 class="judul_deskripsi_risiko">Departemen (Unit Kerja)</h3> <p class="deskripsi_risiko">DATA</p> </div>
+    </div>-->
+        <!-- JANGAN LUPA HAPUS INI -->
+    </main>
+
+    <script src="../js/risk.js"></script>
+</body>
+</html>

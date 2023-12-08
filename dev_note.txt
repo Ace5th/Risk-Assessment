@@ -1,0 +1,18 @@
+Need to Do:
+1. Create multiple browser window:
+a. Index: to show all of the finished projects (work will be project based)
+b. Show: to show the specific project
+c. Input: to create, edit, and delete a single unit of work
+2. Export system from code to wordx
+3. Make the appearance pretty
+4. Nama OPD dan Tahun Anggaran perlu menjadi input
+5. Selamat Datang di Sistim Anggaran Kinerja Berbasis Risiko Kabupaten Toraja Utara
+6. Security System untuk masukan nama OPD
+
+Need to Know:
+1. Make everything in Indonesian
+2. Create word and table within docx
+3. The way function work will be to create utilities which will be required in main, then will be sent to
+preload, where contextBridge will be used to transfer the function to the renderer.js
+4. Every critical function has its own documentary
+

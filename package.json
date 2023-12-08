@@ -1,0 +1,37 @@
+{
+  "name": "risk-analysis",
+  "productName": "Risk Based Budget Analysis",
+  "version": "1.0.0",
+  "description": "Application that output risk analysis inputs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "watch": "nodemon --exec electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "Ace5th",
+    "email": "ajie.maaz@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "docx": "^8.2.4",
+    "electron-squirrel-startup": "^1.0.0",
+    "fs": "^0.0.1-security",
+    "nodemon": "^3.0.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+    "electron": "27.0.4"
+  }
+}

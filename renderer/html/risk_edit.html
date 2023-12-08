@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-security-policy" content="script-src 'self'" />
+    <title>Risk Based Budget Analysis</title>
+    <link rel="stylesheet" href="../css/risk_edit.css" />
+</head>
+<body>
+    <header>
+        <h2 id="id_proyek"></h2>
+        <h2 id="id_risiko"></h2>
+        <button id="kembali_risk_index"><</button>
+        <h2 id="title">Risk Edit</h2>
+        <h2 id="judul_proyek"></h2>
+        <h2 id="judul_risiko"></h2>
+    </header>
+
+    <main>
+        <div id="input_risiko">
+            <form action="/" id="risk_input_form">
+                <div class="upper_risiko">
+                    <h2 class="judul_upper_risiko">Deskripsi Umum</h2>
+                    <div class="lower_risiko">
+                        <label for="kode_kegiatan">Kode Kegiatan</label>
+                        <input type="text" id="kode_kegiatan" placeholder="e.g. PU 001">
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="kegiatan_rujukan">Kegiatan Rujukan</label>
+                        <input type="text" id="kegiatan_rujukan" placeholder="e.g. Pemeliharaan Peralatan dan Mesin Lainnya">
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="kode_risiko">Kode Risiko</label>
+                        <input type="text" id="kode_risiko" placeholder="e.g. BKAD 01">
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="status_risiko">Status Risiko</label>
+                        <select id="status_risiko" name="status_risiko">
+                            <option value="Active">Active</option>
+                            <option value="Retired">Retired</option>
+                        </select>
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="peluang_atau_ancaman">Peluang atau Ancaman</label>
+                        <select id="peluang_atau_ancaman" name="peluang_atau_ancaman">
+                            <option value="Threat">Threat</option>
+                            <option value="Opportunity">Opportunity</option>
+                        </select>
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="kategori_risiko">Kategori Risiko</label>
+                        <select id="kategori_risiko" name="kategori_risiko">
+                            <option value="Strategy and Planning Risk">Strategy and Planning Risk</option>
+                            <option value="Finance Risk">Finance Risk</option>
+                            <option value="Operational/Infrastructure Risk">Operational/Infrastructure Risk</option>
+                            <option value="Hazard Risk">Hazard Risk</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="upper_risiko">
+                    <h2 class="judul_upper_risiko">Identifikasi Risiko</h2>
+                    <div class="lower_risiko">
+                        <label for="unit_kerja">Unit Kerja/Fungsi</label>
+                        <select id="unit_kerja" name="unit_kerja">
+                            <option value="Sekertariat">Sekertariat</option>
+                            <option value="Bidang Anggaran">Bidang Anggaran</option>
+                            <option value="Bidang Asset">Bidang Aset</option>
+                            <option value="Bidang Perbendaharaan">Bidang Perbendaharaan</option>
+                        </select>
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="sasaran">Sasaran</label>
+                        <input type="text" id="sasaran" placeholder="e.g. Meningkatnya pengetahuan aparat Lembang">
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="periode_identifikasi_risiko">Periode Identifikasi Risiko</label>
+                        <input type="text" id="periode_identifikasi_risiko" placeholder="e.g. 2023">
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="deskripsi_risiko">Deskripsi atau Kejadian Risiko</label>
+                        <input type="text" id="deskripsi_risiko" placeholder="e.g. Laporan tidak tepat waktu">
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="akar_penyebab">Akar Penyebab</label>
+                        <input type="text" id="akar_penyebab" placeholder="e.g. Tertundanya penyaluran transfer DTU">
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="indikator_risiko">Indikator Risiko</label>
+                        <input type="text" id="indikator_risiko" placeholder="e.g. Laporan tidak tepat Waktu">
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="internal_control">Faktor Positif/Internal Control Yang Ada Saat Ini</label>
+                        <input type="text" id="internal_control" placeholder="e.g. Sudah adanya Sensus BMD secara Periodik">
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="dampak_kualitatif">Dampak Kualitatif</label>
+                        <input type="text" id="dampak_kualitatif" placeholder="e.g. Kurangnya penyerapan dana desa/lembang">
+                    </div>
+                </div>
+
+                <div class="upper_risiko">
+                    <h2 class="judul_upper_risiko">Risiko Inherent</h2>
+                    <div class="lower_risiko">
+                        <label for="probabilitas">Probabilitas</label>
+                        <select id="probabilitas" name="probabilitas">
+                            <option value="5">5 = Sangat Besar</option>
+                            <option value="4">4 = Besar</option>
+                            <option value="3">3 = Sedang</option>
+                            <option value="2">2 = Kecil</option>
+                            <option value="1">1 = Sangat Kecil</option>
+                        </select>
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="dampak">Dampak</label>
+                        <select id="dampak" name="dampak">
+                            <option value="5">5 = Sangat Besar</option>
+                            <option value="4">4 = Besar</option>
+                            <option value="3">3 = Sedang</option>
+                            <option value="2">2 = Kecil</option>
+                            <option value="1">1 = Sangat Kecil</option>
+                        </select>
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="probabilitas_risiko_inherent_kualitatif">Probabilitas Risiko Inherent Kualitatif</label>
+                        <input type="text" id="probabilitas_risiko_inherent_kualitatif" placeholder="e.g. 20%">
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="dampak_finansial_risiko_inherent">Dampak Finansial Risiko Inherent</label>
+                        <input type="text" id="dampak_finansial_risiko_inherent" placeholder="e.g. Rp. 100.000.000">
+                    </div>
+                </div>
+
+                <div class="upper_risiko">
+                    <h2 class="judul_upper_risiko">Pemilik Risiko</h2>
+                    <div class="lower_risiko">
+                        <label for="pemilik_risiko">Pemilik Risiko</label>
+                        <input type="text" id="pemilik_risiko" placeholder="e.g. Yulius Sambara">
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="jabatan_pemilik_risiko">Jabatan Pemilik Risiko</label>
+                        <input type="text" id="jabatan_pemilik_risiko" placeholder="e.g. Sekertaris BKAD">
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="hp_pemilik_risiko">No. HP Pemilik Risiko</label>
+                        <input type="text" id="hp_pemilik_risiko" placeholder="e.g. 081223423478">
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="email_pemilik_risiko">E-mail Pemilik Risiko</label>
+                        <input type="text" id="email_pemilik_risiko" placeholder="e.g. yulius.s@gmail.com">
+                    </div>
+                </div>
+
+                <div class="upper_risiko">
+                    <h2 class="judul_upper_risiko">Evaluasi Rencana Penanganan Risiko</h2>
+                    <div class="lower_risiko">
+                        <label for="strategi">Strategi</label>
+                        <select id="strategi" name="strategi">
+                            <option value="Avoid">Avoid</option>
+                            <option value="Transfer">Transfer</option>
+                            <option value="Mitigate">Mitigate</option>
+                            <option value="Accept">Accept</option>
+                            <option value="Exploit">Exploit</option>
+                            <option value="Share">Share</option>
+                            <option value="Enhance">Enhance</option>
+                        </select>
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="penanganan_risiko">Penanganan Risiko</label>
+                        <input type="text" id="penanganan_risiko" placeholder="e.g. Melakukan sosialisasi dan pendampinagan terhadap aparat Lembang">
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="biaya_penanganan_risiko">Biaya Penanganan Risiko</label>
+                        <input type="text" id="biaya_penanganan_risiko" placeholder="e.g. Rp. 20.000.000">
+                    </div>
+                </div>
+
+                <div class="upper_risiko">
+                    <h2 class="judul_upper_risiko">Penanganan</h2>
+                    <div class="lower_risiko">
+                        <label for="penanganan_yang_telah_dilakukan">Penanganan Yang Telah Dilakukan</label>
+                        <input type="text" id="penanganan_yang_telah_dilakukan" placeholder="e.g. Melakukan sosialisasi dan pendampinagan terhadap aparat Lembang">
+                    </div>
+                </div>
+
+                <div class="upper_risiko">
+                    <h2 class="judul_upper_risiko">Risiko Residual</h2>
+                    <div class="lower_risiko">
+                        <label for="probabilitas_risiko_residual">Probabilitas Risiko Residual</label>
+                        <select id="probabilitas_risiko_residual" name="probabilitas_risiko_residual">
+                            <option value="5">5 = Sangat Besar</option>
+                            <option value="4">4 = Besar</option>
+                            <option value="3">3 = Sedang</option>
+                            <option value="2">2 = Kecil</option>
+                            <option value="1">1 = Sangat Kecil</option>
+                        </select>
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="dampak_risiko_residual">Dampak Risiko Residual</label>
+                        <select id="dampak_risiko_residual" name="dampak_risiko_residual">
+                            <option value="5">5 = Sangat Besar</option>
+                            <option value="4">4 = Besar</option>
+                            <option value="3">3 = Sedang</option>
+                            <option value="2">2 = Kecil</option>
+                            <option value="1">1 = Sangat Kecil</option>
+                        </select>
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="probabilitas_risiko_residual_kualitatif">Probabilitas Risiko Residual Kualitatif</label>
+                        <input type="text" id="probabilitas_risiko_residual_kualitatif" placeholder="e.g. 4%">
+                    </div>
+
+                    <div class="lower_risiko">
+                        <label for="dampak_finansial_risiko_residual">Dampak Finansial Risiko Residual</label>
+                        <input type="text" id="dampak_finansial_risiko_residual" placeholder="e.g. Rp. 10.000.000">
+                    </div>
+                </div>
+
+                <div class="upper_risiko">
+                    <h2 class="judul_upper_risiko">Departemen</h2>
+                    <div class="lower_risiko">
+                        <label for="departemen_unit_kerja">Departemen (Unit Kerja)</label>
+                        <input type="text" id="departemen_unit_kerja" placeholder="e.g. Sekertariat">
+                    </div>
+                </div>
+
+                <button id="edit_risk_input" type="submit">
+                    EDIT
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="../js/risk_edit.js"></script>
+</body>
+</html>
