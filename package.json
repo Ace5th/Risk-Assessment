@@ -1,7 +1,7 @@
 {
   "name": "risk-analysis",
   "productName": "Risk Based Budget Analysis",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Risk Based Budget Analysis Program",
   "main": "main.js",
   "scripts": {
