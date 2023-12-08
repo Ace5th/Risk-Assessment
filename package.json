@@ -13,7 +13,7 @@
     "lint": "echo \"No linting configured\"",
     "build": "electron-builder build",
     "win-cert": "electron-builder create-self-signed-cert -p ace5th",
-    "release": "electron-builder build -p 'onTagOrDraft'"
+    "release": "electron-builder build -p onTagOrDraft"
   },
   "keywords": [],
   "author": {
