@@ -12,7 +12,8 @@
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
     "build": "electron-builder build",
-    "win-cert": "electron-builder create-self-signed-cert -p ace5th"
+    "win-cert": "electron-builder create-self-signed-cert -p ace5th",
+    "release": "electron-builder build -p 'onTagOrDraft'"
   },
   "keywords": [],
   "author": {
@@ -42,6 +43,9 @@
   "build": {
     "appId": "com.ace5th.riskbasedbudgetanalysis",
     "copyright": "Copyright Ace5th",
+    "publish": {
+      "provider": "github"
+    },
     "mac": {
       "category": "public.app-category.business",
       "target":  "dmg"
