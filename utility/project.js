@@ -4,13 +4,14 @@ const path = require('path');
 
 const { wordExport } = require('./export.js')
 
-const storagePath = path.join(__dirname, '../storage/projects.json');
+//const storagePath = path.join(__dirname, './storage/projects.json');
+const storagePath = path.join(app.getPath('userData'), 'projects.json');
 
 const dataToStore = {
     projects: []
 };
 
-const initiateProjectStorage = () => {
+const initiateProjectStorage = (callback) => {
     fs.access(storagePath, fs.constants.F_OK, (err) => {
         if (err) {
             // File doesn't exist, create and add new data type structure
@@ -19,6 +20,7 @@ const initiateProjectStorage = () => {
                     console.error('Error creating file:', writeErr);
                 } else {
                     console.log('File created.');
+                    callback();
                 }
             });
         } else {
@@ -37,10 +39,12 @@ const initiateProjectStorage = () => {
                                 console.error('Error updating file:', updateErr);
                             } else {
                                 console.log('New data type added to existing file.');
+                                callback();
                             }
                         });
                     } else {
                         console.log('Data type already exists in the file.');
+                        callback();
                     }
 
                 }

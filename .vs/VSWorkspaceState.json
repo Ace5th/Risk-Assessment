@@ -1,10 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\build",
     "\\renderer",
     "\\renderer\\css",
-    "\\renderer\\html"
+    "\\renderer\\html",
+    "\\utility"
   ],
-  "SelectedNode": "\\renderer\\css\\index.css",
+  "SelectedNode": "\\utility\\export.js",
   "PreviewInSolutionExplorer": false
 }

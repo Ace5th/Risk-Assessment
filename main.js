@@ -5,7 +5,8 @@ const fs = require('fs')
 const path = require('path');
 const { v4: uuid } = require('uuid')
 
-const storagePath = path.join(__dirname, './storage/projects.json');
+//const storagePath = path.join(__dirname, './storage/projects.json');
+const storagePath = path.join(app.getPath('userData'), 'projects.json');
 
 let mainWindow;
 let contextMenu = Menu.buildFromTemplate([
@@ -61,20 +62,20 @@ const createMainWindow = () => {
 
   // Additional process once the window is ready
   mainWindow.once('ready-to-show', () => {
-      initiateProjectStorage();
+      initiateProjectStorage(() => {
+          fs.readFile(storagePath, 'utf8', (err, data) => {
+              if (err) {
+                  console.error('Error reading file:', err);
+              };
+              try {
+                  const initiateProjectsData = JSON.parse(data);
+                  const obj = { mode: 'Start', ...initiateProjectsData }
 
-      fs.readFile(storagePath, 'utf8', (err, data) => {
-          if (err) {
-              console.error('Error reading file:', err);
-          };
-          try {
-              const initiateProjectsData = JSON.parse(data);
-              const obj = {mode: 'Start', ...initiateProjectsData}
-
-              mainWindow.webContents.send('initiate-projects-data', obj);
-          } catch (parseError) {
-              console.error('Error parsing JSON:', parseError);
-          };
+                  mainWindow.webContents.send('initiate-projects-data', obj);
+              } catch (parseError) {
+                  console.error('Error parsing JSON:', parseError);
+              };
+          });
       });
   });
 };

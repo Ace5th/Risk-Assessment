@@ -56,7 +56,13 @@
       "certificateFile": "private/ace5th.pfx",
       "certificatePassword": "",
       "publisherName": "ace5th",
-      "verifyUpdateCodeSignature": false
+      "verifyUpdateCodeSignature": false,
+      "target": [ "nsis" ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
     },
     "linux": {
       "category": "Utility"

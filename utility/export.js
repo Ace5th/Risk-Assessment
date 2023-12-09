@@ -3,7 +3,8 @@ const docx = require('docx')
 const fs = require('fs');
 const path = require('path');
 
-const storagePath = path.join(__dirname, '../storage/projects.json');
+//const storagePath = path.join(__dirname, './storage/projects.json');
+const storagePath = path.join(app.getPath('userData'), 'projects.json');
 
 const { Document,
     Packer,
