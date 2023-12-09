@@ -1,1 +1,3 @@
-C:\Users\"USER"\AppData\Roaming\Risk Based Budget Analysis
+C:\Users\"USER"\AppData\Roaming\Risk Based Budget Analysis\projects.json
+
+The storage for this app will be located in the directory above. "USER" could be just USER or it could be the name of the computer or someone who owns the computer.
